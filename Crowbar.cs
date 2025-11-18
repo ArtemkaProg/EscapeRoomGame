@@ -3,13 +3,19 @@
     internal class Crowbar : Item
     {
         public bool hasCrowbar = false;
-        public Crowbar()
-        {
-            name = "Crowbar";
-        }
+        public Crowbar() => name = "Crowbar";
+
         public override void Info()
         {
-            Console.WriteLine($"\nСтальний ломик. Достатньо міцний щоб щось взламати.\n");
+            Console.WriteLine();
+            Visual.DrawDivider();
+            Console.ForegroundColor = ConsoleColor.DarkGray;
+            Visual.TypeWrite("ЛОМИК", 50);
+            Console.ResetColor();
+            Console.WriteLine();
+            Visual.TypeWrite("Стальний ломик. Достатньо міцний щоб щось взламати.");
+            Console.WriteLine("\n");
+            Visual.DrawDivider();
         }
     }
 }

@@ -4,31 +4,22 @@
     {
         public bool hasPin = false;
         public string pin = "2087";
-        public PinCode()
-        {
-            name = "PinCode";
-        }
+        public PinCode() => name = "PinCode";
 
         public override void Info()
-        {   //8 - III, 2 - I, 7 - IV, 0 - II
-            Console.Write($"\nПластикова картка з шифром на звороті: 8 - ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("III");
-            Console.ResetColor();
-            Console.Write(", 2 - ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("I");
-            Console.ResetColor();
-            Console.Write(", 7 - ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("IV");
-            Console.ResetColor();
-            Console.Write(", 0 - ");
-            Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.Write("II");
-            Console.ResetColor();
-            Console.WriteLine(".");
+        {
             Console.WriteLine();
+            Visual.DrawDivider();
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Visual.TypeWrite("ПІН-КОД", 50);
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.Write("Пластикова картка з шифром: ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write("8-III, 2-I, 7-IV, 0-II");
+            Console.ResetColor();
+            Console.WriteLine("\n");
+            Visual.DrawDivider();
         }
     }
 }
